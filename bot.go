@@ -71,7 +71,6 @@ func (a *Bot) ScrapePlayers(ctx context.Context) {
 
 			newPlayers := []string{}
 			for _, p := range currentPlayers {
-				log.Println(p)
 				cm[p] = struct{}{}
 				if _, ok := m[p]; ok {
 					continue
