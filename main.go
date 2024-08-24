@@ -53,6 +53,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	go bot.ScrapePlayers(ctx)
+
 	bot.ListenEvent(ctx)
 }
 

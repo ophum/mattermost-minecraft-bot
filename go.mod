@@ -4,7 +4,7 @@ go 1.22.2
 
 require (
 	github.com/mattermost/mattermost/server/public v0.1.6
-	github.com/ophum/mc-client v0.0.0-20240824073133-0e87e4637a5a
+	github.com/ophum/mc-client v0.0.0-20240824154954-223172b311ad
 	gopkg.in/yaml.v3 v3.0.1
 )
 

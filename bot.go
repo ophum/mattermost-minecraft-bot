@@ -52,6 +52,65 @@ func NewBot(ctx context.Context, config *Config) (*Bot, error) {
 	return &bot, nil
 }
 
+func (a *Bot) ScrapePlayers(ctx context.Context) {
+	m := map[string]struct{}{}
+	t := time.NewTicker(time.Second * 10)
+	defer t.Stop()
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		case <-t.C:
+			currentPlayers, err := a.mcClient.List(ctx)
+			if err != nil {
+				log.Println(err)
+				continue
+			}
+
+			cm := map[string]struct{}{}
+
+			newPlayers := []string{}
+			for _, p := range currentPlayers {
+				log.Println(p)
+				cm[p] = struct{}{}
+				if _, ok := m[p]; ok {
+					continue
+				}
+
+				newPlayers = append(newPlayers, fmt.Sprintf("`%s`", p))
+
+				m[p] = struct{}{}
+			}
+
+			leftPlayers := []string{}
+			for p := range m {
+				if _, ok := cm[p]; ok {
+					continue
+				}
+
+				leftPlayers = append(leftPlayers, fmt.Sprintf("`%s`", p))
+
+				delete(m, p)
+			}
+
+			msg := ""
+
+			if len(newPlayers) > 0 {
+				msg = fmt.Sprintf("%s%sが参加しました。\n", msg, strings.Join(newPlayers, ", "))
+			}
+			if len(leftPlayers) > 0 {
+				msg = fmt.Sprintf("%s%sが退出しました。\n", msg, strings.Join(leftPlayers, ", "))
+			}
+			if msg == "" {
+				continue
+			}
+			if err := postMsg(ctx, a.mmClient, a.channel.Id, msg); err != nil {
+				log.Println(err)
+			}
+		}
+	}
+}
+
 func (a *Bot) ListenEvent(ctx context.Context) {
 	var err error
 	failCount := 0
