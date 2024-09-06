@@ -126,6 +126,8 @@ github.com/ophum/mc-client v0.0.0-20240824152914-e9ca6fc37943 h1:DGu19bJaeMKV+A4
 github.com/ophum/mc-client v0.0.0-20240824152914-e9ca6fc37943/go.mod h1:egPRNEXu4+nx3owx2J6uJyuNmjcQo+ym3c2r8/Lxjkg=
 github.com/ophum/mc-client v0.0.0-20240824154954-223172b311ad h1:rvvottFVoQNWkAAjlxy9cqa0UiBt01bCIXW+zrjwvUc=
 github.com/ophum/mc-client v0.0.0-20240824154954-223172b311ad/go.mod h1:egPRNEXu4+nx3owx2J6uJyuNmjcQo+ym3c2r8/Lxjkg=
+github.com/ophum/mc-client v0.0.0-20240906131817-cbc55890172d h1:RigSjI/+OhnMCB2ci/XrZfOqIVcWZb20ZpXO/wCyxgo=
+github.com/ophum/mc-client v0.0.0-20240906131817-cbc55890172d/go.mod h1:egPRNEXu4+nx3owx2J6uJyuNmjcQo+ym3c2r8/Lxjkg=
 github.com/pborman/uuid v1.2.1 h1:+ZZIw58t/ozdjRaXh/3awHfmWRbzYxJoAdNJxe/3pvw=
 github.com/pborman/uuid v1.2.1/go.mod h1:X/NO0urCmaxf9VXbdlT7C2Yzkj2IKimNn4k+gtPdI/k=
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
