@@ -58,3 +58,12 @@ nfpms:
       - deb
     scripts:
       preinstall: misc/preinstall.sh
+      postinstall: misc/postinstall.sh
+    contents:
+      - src: misc/mattermost-minecraft-bot.service
+        dst: /lib/systemd/system/mattermost-minecraft-bot.service
+        type: config
+      - dst: /etc/mattermost-minecraft-bot
+        type: dir
+        file_info:
+          mode: 0700
