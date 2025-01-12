@@ -1,0 +1,13 @@
+[Unit]
+Description=Mattermost Minecraft Bot
+After=network-online.target
+
+[Service]
+Type=simple
+User=mattermost-minecraft-bot
+Group=mattermost-minecraft-bot
+ExecStart=mattermost-minecraft-bot -config /etc/mattermost-minecraft-bot/config.yaml
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
