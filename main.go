@@ -7,13 +7,26 @@ import (
 	"os"
 
 	"github.com/mattermost/mattermost/server/public/model"
+	"github.com/ophum/mc-client/rcon"
 	"gopkg.in/yaml.v3"
 )
 
 type ConfigMinecraft struct {
-	Host     string `yaml:"host"`
-	Post     int    `yaml:"port"`
-	Password string `yaml:"password"`
+	Host       string `yaml:"host"`
+	Post       int    `yaml:"port"`
+	Password   string `yaml:"password"`
+	ServerType string `yaml:"serverType"`
+}
+
+func (c *ConfigMinecraft) GetServerType() rcon.ServerType {
+	switch c.ServerType {
+	case "vanilla":
+		return rcon.ServerTypeVanilla
+	case "spigot":
+		return rcon.ServerTypeSpigot
+	default:
+		return rcon.ServerTypeVanilla
+	}
 }
 
 type Config struct {

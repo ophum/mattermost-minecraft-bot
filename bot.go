@@ -27,7 +27,12 @@ func NewBot(ctx context.Context, config *Config) (*Bot, error) {
 	mmClient := model.NewAPIv4Client(config.URL)
 	mmClient.SetToken(config.Token)
 
-	mcClient, err := mcclient.New(config.Minecraft.Host, config.Minecraft.Post, config.Minecraft.Password)
+	mcClient, err := mcclient.New(
+		config.Minecraft.Host,
+		config.Minecraft.Post,
+		config.Minecraft.Password,
+		mcclient.WithServerType(config.Minecraft.GetServerType()),
+	)
 	if err != nil {
 		return nil, err
 	}

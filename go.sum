@@ -122,6 +122,8 @@ github.com/oklog/run v1.1.0/go.mod h1:sVPdnTZT1zYwAJeCMu2Th4T21pA3FPOQRfWjQlk7DV
 github.com/openzipkin/zipkin-go v0.1.1/go.mod h1:NtoC/o8u3JlF1lSlyPNswIbeQH9bJTmOf0Erfk+hxe8=
 github.com/ophum/mc-client v0.0.0-20240906132842-3ab73323eec7 h1:pphpX8o4ahnkYobPdBSLRCj9v3rOuINvcxebLTD7DTA=
 github.com/ophum/mc-client v0.0.0-20240906132842-3ab73323eec7/go.mod h1:egPRNEXu4+nx3owx2J6uJyuNmjcQo+ym3c2r8/Lxjkg=
+github.com/ophum/mc-client v0.0.0-20250118121017-5be248546fff h1:FExlfW+Vnly8xtvpDOqqBuw2wdym8ZCwFrNaaLIXqf8=
+github.com/ophum/mc-client v0.0.0-20250118121017-5be248546fff/go.mod h1:egPRNEXu4+nx3owx2J6uJyuNmjcQo+ym3c2r8/Lxjkg=
 github.com/pborman/uuid v1.2.1 h1:+ZZIw58t/ozdjRaXh/3awHfmWRbzYxJoAdNJxe/3pvw=
 github.com/pborman/uuid v1.2.1/go.mod h1:X/NO0urCmaxf9VXbdlT7C2Yzkj2IKimNn4k+gtPdI/k=
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
